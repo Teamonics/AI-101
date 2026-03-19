@@ -1,89 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" fill="none">
   <title>AI reasoning engine with capabilities: write, analyze, code, reason, search, create</title>
 
-  <!-- Chat bubble (before state) -->
-  <rect id="chat-bubble" x="300" y="220" width="200" height="140" rx="16" ry="16"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-  <!-- Chat bubble tail -->
-  <path id="chat-bubble-tail" d="M340 360 L320 390 L370 360Z"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
+  <!-- Chat bubble (before state — centered, larger) -->
+  <rect id="chat-bubble" x="190" y="170" width="220" height="140" rx="18"
+        stroke="#E8E4DF" stroke-width="2" fill="none"/>
+  <path id="chat-bubble-tail" d="M230 310 L210 345 L268 310Z"
+        stroke="#E8E4DF" stroke-width="2" fill="none"/>
+  <!-- Lines inside bubble (vague) -->
+  <line x1="218" y1="218" x2="382" y2="218" stroke="#6B6660" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="218" y1="236" x2="372" y2="236" stroke="#6B6660" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="218" y1="254" x2="350" y2="254" stroke="#6B6660" stroke-width="1.5" stroke-linecap="round"/>
 
   <!-- Brain shape (after state, hidden initially) -->
   <g id="brain-shape" opacity="0">
-    <path d="M400 180
-      C420 178 440 188 448 205
-      C460 200 475 208 478 222
-      C492 224 500 238 496 252
-      C508 260 510 278 500 288
-      C504 302 496 316 484 318
-      C480 332 466 338 454 334
-      C446 344 432 348 420 342
-      C412 350 396 350 388 342
-      C376 348 362 344 354 334
-      C342 338 328 332 324 318
-      C312 316 304 302 308 288
-      C298 278 300 260 312 252
-      C308 238 316 224 330 222
-      C333 208 348 200 360 205
-      C368 188 388 178 400 180Z"
-      stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-    <!-- Brain fold lines -->
-    <path d="M380 220 C375 230 378 240 385 245 C390 250 388 260 382 265"
-          stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.6"/>
-    <path d="M420 220 C425 230 422 240 415 245 C410 250 412 260 418 265"
-          stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.6"/>
-    <path d="M395 265 C400 275 405 275 410 265"
-          stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M300 160
+      C322 158 344 170 352 190
+      C368 184 386 194 390 210
+      C406 212 416 228 412 244
+      C426 254 428 274 416 284
+      C420 300 410 316 396 318
+      C392 334 376 342 362 336
+      C352 348 336 352 324 344
+      C312 354 288 354 276 344
+      C264 352 248 348 238 336
+      C224 342 208 334 204 318
+      C190 316 180 300 184 284
+      C172 274 174 254 188 244
+      C184 228 194 212 210 210
+      C214 194 232 184 248 190
+      C256 170 278 158 300 160Z"
+      stroke="#4AAFB5" stroke-width="2" fill="rgba(74,175,181,0.05)"/>
+    <path d="M280 200 C272 216 276 230 283 238 C289 244 286 258 279 264"
+          stroke="#4AAFB5" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <path d="M320 200 C328 216 324 230 317 238 C311 244 314 258 321 264"
+          stroke="#4AAFB5" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <path d="M292 264 C300 276 308 276 316 264"
+          stroke="#4AAFB5" stroke-width="1.2" fill="none" opacity="0.6"/>
   </g>
 
-  <!-- Connection lines from center to icons (dashed) -->
-  <line id="line-write"   class="connection-line" x1="400" y1="290" x2="540" y2="180" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
-  <line id="line-analyze" class="connection-line" x1="400" y1="290" x2="570" y2="295" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
-  <line id="line-code"    class="connection-line" x1="400" y1="290" x2="530" y2="400" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
-  <line id="line-reason"  class="connection-line" x1="400" y1="290" x2="270" y2="400" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
-  <line id="line-search"  class="connection-line" x1="400" y1="290" x2="235" y2="295" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
-  <line id="line-create"  class="connection-line" x1="400" y1="290" x2="270" y2="180" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <!-- Connection lines -->
+  <line id="line-write"   class="connection-line" x1="300" y1="260" x2="460" y2="148" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-analyze" class="connection-line" x1="300" y1="260" x2="490" y2="265" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-code"    class="connection-line" x1="300" y1="260" x2="452" y2="382" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-reason"  class="connection-line" x1="300" y1="260" x2="148" y2="382" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-search"  class="connection-line" x1="300" y1="260" x2="110" y2="265" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-create"  class="connection-line" x1="300" y1="260" x2="148" y2="148" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
 
-  <!-- Icon: Write (pen/pencil) — top right -->
-  <g id="icon-write" class="capability-icon" transform="translate(525, 155)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <path d="M8 22l2-6 12-12 4 4-12 12-6 2z" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
-    <line x1="18" y1="8" x2="22" y2="12" stroke="#4AAFB5" stroke-width="1.2"/>
+  <!-- Capability icons — each 36×36 -->
+  <!-- Write (top right) -->
+  <g id="icon-write" class="capability-icon" transform="translate(442, 130)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <path d="M9 27l2-7 14-14 5 5-14 14-7 2z" stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
+    <line x1="21" y1="10" x2="26" y2="15" stroke="#4AAFB5" stroke-width="1.5"/>
   </g>
 
-  <!-- Icon: Analyze (bar chart) — right -->
-  <g id="icon-analyze" class="capability-icon" transform="translate(555, 280)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <rect x="7" y="18" width="4" height="6" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
-    <rect x="13" y="12" width="4" height="12" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
-    <rect x="19" y="8" width="4" height="16" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+  <!-- Analyze (right) -->
+  <g id="icon-analyze" class="capability-icon" transform="translate(474, 247)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <rect x="8" y="22" width="5" height="8" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+    <rect x="16" y="15" width="5" height="15" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+    <rect x="24" y="10" width="5" height="20" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
   </g>
 
-  <!-- Icon: Code (brackets) — bottom right -->
-  <g id="icon-code" class="capability-icon" transform="translate(515, 385)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <path d="M12 9l-5 6 5 6M18 9l5 6-5 6" stroke="#4AAFB5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Code (bottom right) -->
+  <g id="icon-code" class="capability-icon" transform="translate(434, 364)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <path d="M14 10l-6 8 6 8M22 10l6 8-6 8" stroke="#4AAFB5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- Icon: Reason (lightbulb) — bottom left -->
-  <g id="icon-reason" class="capability-icon" transform="translate(255, 385)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <path d="M15 7a6 6 0 014 10.5V20h-8v-2.5A6 6 0 0115 7z" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
-    <line x1="12" y1="22" x2="18" y2="22" stroke="#4AAFB5" stroke-width="1.2"/>
-    <line x1="13" y1="24.5" x2="17" y2="24.5" stroke="#4AAFB5" stroke-width="1.2"/>
+  <!-- Reason (bottom left) -->
+  <g id="icon-reason" class="capability-icon" transform="translate(130, 364)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <path d="M18 8a7 7 0 014.9 11.9V23h-9.8v-3.1A7 7 0 0118 8z" stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
+    <line x1="14" y1="26" x2="22" y2="26" stroke="#4AAFB5" stroke-width="1.5"/>
+    <line x1="15" y1="29" x2="21" y2="29" stroke="#4AAFB5" stroke-width="1.5"/>
   </g>
 
-  <!-- Icon: Search (magnifying glass) — left -->
-  <g id="icon-search" class="capability-icon" transform="translate(220, 280)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <circle cx="13" cy="13" r="6" stroke="#4AAFB5" stroke-width="1.2"/>
-    <line x1="17.5" y1="17.5" x2="23" y2="23" stroke="#4AAFB5" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Search (left) -->
+  <g id="icon-search" class="capability-icon" transform="translate(92, 247)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <circle cx="15" cy="15" r="7" stroke="#4AAFB5" stroke-width="1.5"/>
+    <line x1="20.5" y1="20.5" x2="28" y2="28" stroke="#4AAFB5" stroke-width="1.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Icon: Create (puzzle piece) — top left -->
-  <g id="icon-create" class="capability-icon" transform="translate(255, 155)" opacity="0">
-    <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
-    <path d="M7 7h6v4a2 2 0 004 0V7h6v6h-4a2 2 0 000 4h4v6H17v-4a2 2 0 00-4 0v4H7v-6h4a2 2 0 000-4H7V7z"
-          stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+  <!-- Create (top left) -->
+  <g id="icon-create" class="capability-icon" transform="translate(130, 130)" opacity="0">
+    <rect x="0" y="0" width="36" height="36" rx="8" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <path d="M8 8h7v4a2.5 2.5 0 005 0V8h7v7h-4a2.5 2.5 0 000 5h4v7h-7v-4a2.5 2.5 0 00-5 0v4H8v-7h4a2.5 2.5 0 000-5H8V8z"
+          stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
   </g>
 </svg>

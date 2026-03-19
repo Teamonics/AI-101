@@ -1,76 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" fill="none">
   <title>Open folder revealing persistent layers: Knowledge Base, Custom Instructions, and Persistent Chats</title>
 
-  <!-- Folder back -->
+  <!-- Folder back panel -->
   <path id="folder-back"
-        d="M180 340 L180 480 L620 480 L620 340 L380 340 L360 320 L260 320 L240 340 Z"
-        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)"/>
+        d="M100 330 L100 470 L500 470 L500 330 L320 330 L300 310 L200 310 L180 330 Z"
+        stroke="#E8E4DF" stroke-width="2" fill="rgba(232,228,223,0.04)"/>
 
-  <!-- Folder front flap (starts closed, rotates open) -->
+  <!-- Folder front flap -->
   <path id="folder-front"
-        d="M180 340 L620 340 L620 360 L180 360 Z"
-        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.08)"/>
+        d="M100 330 L500 330 L500 354 L100 354 Z"
+        stroke="#E8E4DF" stroke-width="2" fill="rgba(232,228,223,0.08)"/>
 
-  <!-- Persist line (vertical dashed) -->
-  <line id="persist-line" class="persist-line" x1="400" y1="310" x2="400" y2="145"
-        stroke="#E8915A" stroke-width="1" stroke-dasharray="5 4" opacity="0"/>
+  <!-- Persist line (vertical dashed, connects all layers) -->
+  <line id="persist-line" class="persist-line" x1="300" y1="300" x2="300" y2="125"
+        stroke="#E8915A" stroke-width="1.5" stroke-dasharray="5 4" opacity="0"/>
 
-  <!-- Layer: Documents (Knowledge Base) -->
+  <!-- Layer 1: Documents (Knowledge Base) — rises from folder -->
   <g id="layer-docs" class="folder-layer" opacity="0">
-    <!-- 3 stacked documents -->
-    <rect x="360" y="290" width="80" height="55" rx="4" stroke="#4AAFB5" stroke-width="1.2"
-          fill="rgba(74,175,181,0.08)" transform="rotate(-4, 400, 317)"/>
-    <rect x="360" y="285" width="80" height="55" rx="4" stroke="#4AAFB5" stroke-width="1.2"
-          fill="rgba(74,175,181,0.08)" transform="rotate(0, 400, 312)"/>
-    <rect x="360" y="280" width="80" height="55" rx="4" stroke="#4AAFB5" stroke-width="1.2"
-          fill="rgba(74,175,181,0.1)" transform="rotate(4, 400, 307)"/>
-    <!-- Lines on front doc -->
-    <line x1="373" y1="294" x2="427" y2="294" stroke="#4AAFB5" stroke-width="0.8" opacity="0.6"/>
-    <line x1="373" y1="302" x2="427" y2="302" stroke="#4AAFB5" stroke-width="0.8" opacity="0.6"/>
-    <line x1="373" y1="310" x2="415" y2="310" stroke="#4AAFB5" stroke-width="0.8" opacity="0.6"/>
+    <!-- 3 stacked docs -->
+    <rect x="258" y="276" width="88" height="58" rx="5"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"
+          transform="rotate(-5, 302, 305)"/>
+    <rect x="258" y="270" width="88" height="58" rx="5"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+    <line x1="272" y1="283" x2="332" y2="283" stroke="#4AAFB5" stroke-width="1" opacity="0.7"/>
+    <line x1="272" y1="293" x2="330" y2="293" stroke="#4AAFB5" stroke-width="1" opacity="0.5"/>
+    <line x1="272" y1="303" x2="322" y2="303" stroke="#4AAFB5" stroke-width="1" opacity="0.4"/>
     <!-- Label -->
-    <text class="layer-label" x="455" y="310" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="11" fill="#4AAFB5" opacity="0">Knowledge Base</text>
+    <text class="layer-label" x="370" y="300" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="12" fill="#4AAFB5" font-weight="500" opacity="0">Knowledge Base</text>
   </g>
 
-  <!-- Layer: Gear (Custom Instructions) -->
+  <!-- Layer 2: Gear (Custom Instructions) -->
   <g id="layer-gear" class="folder-layer" opacity="0">
-    <!-- Gear / cog shape -->
-    <path d="M400 218 m-22 0 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.08)"/>
-    <!-- Gear teeth -->
-    <path d="M400 196 L403 190 L397 190 Z
-             M400 240 L403 246 L397 246 Z
-             M378 218 L372 215 L372 221 Z
-             M422 218 L428 215 L428 221 Z
-             M384 202 L379 197 L375 201 Z
-             M416 202 L421 197 L425 201 Z
-             M384 234 L379 239 L375 235 Z
-             M416 234 L421 239 L425 235 Z"
-          stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.15)"/>
-    <!-- Inner circle -->
-    <circle cx="400" cy="218" r="10" stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.1)"/>
+    <!-- Gear outline with teeth -->
+    <path d="M300 190 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0"
+          stroke="#E8915A" stroke-width="1.5" fill="rgba(232,145,90,0.08)"/>
+    <path d="M300 164 L304 156 L296 156 Z
+             M300 216 L304 224 L296 224 Z
+             M274 190 L266 186 L266 194 Z
+             M326 190 L334 186 L334 194 Z
+             M281 171 L275 164 L270 169 Z
+             M319 171 L325 164 L330 169 Z
+             M281 209 L275 216 L270 211 Z
+             M319 209 L325 216 L330 211 Z"
+          fill="rgba(232,145,90,0.25)" stroke="#E8915A" stroke-width="1"/>
+    <circle cx="300" cy="190" r="12" stroke="#E8915A" stroke-width="1.5" fill="rgba(232,145,90,0.1)"/>
     <!-- Label -->
-    <text class="layer-label" x="432" y="222" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="11" fill="#E8915A" opacity="0">Custom Instructions</text>
+    <text class="layer-label" x="370" y="194" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="12" fill="#E8915A" font-weight="500" opacity="0">Custom Instructions</text>
   </g>
 
-  <!-- Layer: Chat bubbles (Persistent Chats) -->
+  <!-- Layer 3: Chat bubbles (Persistent Chats) -->
   <g id="layer-chats" class="folder-layer" opacity="0">
-    <!-- Three overlapping bubbles -->
-    <rect x="340" y="148" width="70" height="44" rx="10" stroke="#7DCFD3" stroke-width="1.2"
-          fill="rgba(125,207,211,0.08)"/>
-    <path d="M352 192 L348 204 L362 192" stroke="#7DCFD3" stroke-width="1" fill="rgba(125,207,211,0.08)"/>
-
-    <rect x="370" y="142" width="70" height="44" rx="10" stroke="#4AAFB5" stroke-width="1.2"
+    <!-- Two overlapping bubbles -->
+    <rect x="256" y="118" width="74" height="48" rx="12"
+          stroke="#7DCFD3" stroke-width="1.5" fill="rgba(125,207,211,0.07)"/>
+    <path d="M268 166 L264 180 L280 166" stroke="#7DCFD3" stroke-width="1.2"
+          fill="rgba(125,207,211,0.07)"/>
+    <rect x="278" y="112" width="74" height="48" rx="12"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <path d="M334 160 L338 174 L324 160" stroke="#4AAFB5" stroke-width="1.2"
           fill="rgba(74,175,181,0.1)"/>
-    <path d="M424 186 L428 198 L416 186" stroke="#4AAFB5" stroke-width="1" fill="rgba(74,175,181,0.1)"/>
-
-    <!-- Lines inside front bubble -->
-    <line x1="382" y1="156" x2="426" y2="156" stroke="#4AAFB5" stroke-width="0.8" opacity="0.6"/>
-    <line x1="382" y1="164" x2="420" y2="164" stroke="#4AAFB5" stroke-width="0.8" opacity="0.6"/>
+    <line x1="292" y1="126" x2="338" y2="126" stroke="#4AAFB5" stroke-width="1" opacity="0.6"/>
+    <line x1="292" y1="136" x2="334" y2="136" stroke="#4AAFB5" stroke-width="1" opacity="0.5"/>
     <!-- Label -->
-    <text class="layer-label" x="452" y="168" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="11" fill="#7DCFD3" opacity="0">Persistent Chats</text>
+    <text class="layer-label" x="370" y="140" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="12" fill="#7DCFD3" font-weight="500" opacity="0">Persistent Chats</text>
   </g>
 </svg>

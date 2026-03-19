@@ -1,102 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
-  <title>Three document drafts showing iteration from rough v1 to polished v3, with feedback prompts</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" fill="none">
+  <title>Three drafts showing iteration from rough v1 to polished v3 with feedback arrows</title>
 
-  <!-- Draft v1 (rough) -->
-  <g id="draft-v1" class="draft" transform="translate(90, 160)">
-    <!-- Document shape -->
-    <path d="M0 0 L110 0 L130 20 L130 200 L0 200 Z" stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)"/>
-    <path d="M110 0 L110 20 L130 20" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-    <!-- Wavy/rough lines simulating rough draft -->
-    <path d="M14 46 C22 43 30 48 38 44 C46 40 54 46 62 43 C70 40 78 45 86 42 C94 39 104 44 112 42"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 60 C20 57 28 62 38 59 C48 56 56 61 66 58 C76 55 86 60 96 58 C104 56 110 59 112 57"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 74 C24 71 32 76 44 73 C54 70 60 75 72 72 C82 69 90 74 100 71"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 88 C18 85 26 90 36 87 C46 84 54 89 64 86 C74 83 84 88 92 85"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 102 C22 99 32 104 42 101 C52 98 58 103 70 100 C78 97 86 102 94 99"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 116 C20 113 28 118 40 115 C50 112 56 117 68 114 C78 111 88 116 96 113"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M14 130 C24 127 34 132 46 129 C56 126 62 131 74 128"
-          stroke="#A09B94" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <!-- Version label -->
-    <text x="65" y="225" text-anchor="middle" font-family="JetBrains Mono, monospace"
-          font-size="12" fill="#6B6660">v1</text>
+  <!-- Progress track (vertical) -->
+  <line x1="300" y1="60" x2="300" y2="460" stroke="#4A4742" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- === DRAFT V1 === -->
+  <g id="draft-v1" class="draft">
+    <!-- Doc outline -->
+    <rect x="120" y="50" width="160" height="130" rx="6"
+          stroke="#E8E4DF" stroke-width="2" fill="rgba(232,228,223,0.04)"/>
+    <!-- Dog-ear -->
+    <path d="M256 50 L280 74 L256 74 Z" stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.06)"/>
+    <!-- Wavy rough lines -->
+    <path d="M140 84 C150 81 160 86 170 82 C180 78 190 84 200 80 C210 76 218 82 224 79"
+          stroke="#6B6660" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 98 C148 95 158 100 168 96 C178 92 188 97 198 94 C208 91 218 95 224 93"
+          stroke="#6B6660" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 112 C152 109 162 114 172 110 C182 106 190 111 200 108"
+          stroke="#6B6660" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 126 C150 123 162 128 174 124 C184 120 194 125 202 122"
+          stroke="#6B6660" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 140 C148 137 158 142 168 138 C176 135 184 139 192 137"
+          stroke="#6B6660" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- v1 label -->
+    <text x="200" y="196" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="13" fill="#6B6660">v1</text>
   </g>
 
-  <!-- Arrow 1→2 -->
+  <!-- Feedback 1 + Arrow -->
   <g id="arrow-1-2" class="progress-arrow" opacity="0">
-    <path d="M240 260 L318 260" stroke="#E8915A" stroke-width="1.5" stroke-linecap="round"/>
-    <polygon points="318,260 308,255 308,265" fill="#E8915A"/>
+    <!-- Arrow line -->
+    <path d="M300 190 L300 230" stroke="#E8915A" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="300,235 294,220 306,220" fill="#E8915A"/>
+    <!-- Feedback bubble -->
+    <rect x="318" y="196" width="152" height="28" rx="8"
+          stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
+    <text x="394" y="215" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="11" fill="#E8915A">"More structure please"</text>
   </g>
 
-  <!-- Feedback bubble 1 -->
-  <g id="feedback-1" opacity="0">
-    <rect x="218" y="218" width="130" height="32" rx="8" stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
-    <path d="M268 250 L258 265 L278 250" stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
-    <text x="283" y="236" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="9.5" fill="#E8915A">"Make it more</text>
-    <text x="283" y="247" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="9.5" fill="#E8915A">structured"</text>
+  <!-- === DRAFT V2 === -->
+  <g id="draft-v2" class="draft" opacity="0">
+    <rect x="120" y="240" width="160" height="130" rx="6"
+          stroke="#E8E4DF" stroke-width="2" fill="rgba(232,228,223,0.04)"/>
+    <path d="M256 240 L280 264 L256 264 Z" stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.06)"/>
+    <!-- Straighter lines / more structure -->
+    <rect x="140" y="266" width="84" height="8" rx="2" fill="rgba(232,228,223,0.15)"/>
+    <line x1="140" y1="286" x2="224" y2="286" stroke="#A09B94" stroke-width="1"/>
+    <line x1="140" y1="298" x2="220" y2="298" stroke="#A09B94" stroke-width="1"/>
+    <line x1="140" y1="310" x2="224" y2="310" stroke="#A09B94" stroke-width="1"/>
+    <line x1="140" y1="318" x2="208" y2="318" stroke="#A09B94" stroke-width="1"/>
+    <line x1="140" y1="330" x2="218" y2="330" stroke="#A09B94" stroke-width="1"/>
+    <line x1="140" y1="342" x2="210" y2="342" stroke="#A09B94" stroke-width="1"/>
+    <!-- v2 label -->
+    <text x="200" y="386" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="13" fill="#A09B94">v2</text>
   </g>
 
-  <!-- Draft v2 (structured) -->
-  <g id="draft-v2" class="draft" transform="translate(335, 160)" opacity="0">
-    <path d="M0 0 L110 0 L130 20 L130 200 L0 200 Z" stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)"/>
-    <path d="M110 0 L110 20 L130 20" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-    <!-- Structured lines (straighter) -->
-    <line x1="14" y1="46" x2="112" y2="46" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="58" x2="112" y2="58" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="70" x2="90" y2="70" stroke="#A09B94" stroke-width="1"/>
-    <!-- Paragraph break -->
-    <line x1="14" y1="88" x2="112" y2="88" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="100" x2="112" y2="100" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="112" x2="95" y2="112" stroke="#A09B94" stroke-width="1"/>
-    <!-- Paragraph break -->
-    <line x1="14" y1="130" x2="112" y2="130" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="142" x2="85" y2="142" stroke="#A09B94" stroke-width="1"/>
-    <!-- Version label -->
-    <text x="65" y="225" text-anchor="middle" font-family="JetBrains Mono, monospace"
-          font-size="12" fill="#6B6660">v2</text>
-  </g>
-
-  <!-- Arrow 2→3 -->
+  <!-- Feedback 2 + Arrow -->
   <g id="arrow-2-3" class="progress-arrow" opacity="0">
-    <path d="M484 260 L562 260" stroke="#E8915A" stroke-width="1.5" stroke-linecap="round"/>
-    <polygon points="562,260 552,255 552,265" fill="#E8915A"/>
+    <path d="M300 382 L300 422" stroke="#E8915A" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="300,427 294,412 306,412" fill="#E8915A"/>
+    <!-- Feedback bubble -->
+    <rect x="318" y="388" width="162" height="28" rx="8"
+          stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
+    <text x="399" y="407" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="11" fill="#E8915A">"Add a header, tighten it"</text>
   </g>
 
-  <!-- Feedback bubble 2 -->
-  <g id="feedback-2" opacity="0">
-    <rect x="458" y="218" width="155" height="32" rx="8" stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
-    <path d="M515 250 L505 265 L525 250" stroke="#E8915A" stroke-width="1" fill="rgba(232,145,90,0.08)"/>
-    <text x="536" y="236" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="9.5" fill="#E8915A">"Add a header &amp;</text>
-    <text x="536" y="247" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
-          font-size="9.5" fill="#E8915A">tighten language"</text>
-  </g>
-
-  <!-- Draft v3 (polished) -->
-  <g id="draft-v3" class="draft" transform="translate(580, 160)" opacity="0">
-    <path d="M0 0 L110 0 L130 20 L130 200 L0 200 Z" stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)"/>
-    <path d="M110 0 L110 20 L130 20" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-    <!-- Header area (accent fill) -->
-    <rect x="0" y="30" width="130" height="22" fill="rgba(232,145,90,0.12)" stroke="none"/>
-    <line x1="14" y1="39" x2="112" y2="39" stroke="#E8915A" stroke-width="1" opacity="0.6"/>
-    <!-- Clean organized lines -->
-    <line x1="14" y1="70" x2="112" y2="70" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="82" x2="112" y2="82" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="94" x2="95" y2="94" stroke="#A09B94" stroke-width="1"/>
-    <!-- Section separator -->
-    <line x1="14" y1="108" x2="112" y2="108" stroke="#4A4742" stroke-width="0.5"/>
-    <line x1="14" y1="120" x2="112" y2="120" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="132" x2="100" y2="132" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="144" x2="108" y2="144" stroke="#A09B94" stroke-width="1"/>
-    <line x1="14" y1="156" x2="90" y2="156" stroke="#A09B94" stroke-width="1"/>
-    <!-- Version label -->
-    <text x="65" y="225" text-anchor="middle" font-family="JetBrains Mono, monospace"
-          font-size="12" fill="#E8915A">v3</text>
+  <!-- === DRAFT V3 (polished) === -->
+  <g id="draft-v3" class="draft" opacity="0">
+    <rect x="120" y="428" width="160" height="130" rx="6"
+          stroke="#E8915A" stroke-width="2" fill="rgba(232,145,90,0.05)"/>
+    <path d="M256 428 L280 452 L256 452 Z" stroke="#E8915A" stroke-width="1.5" fill="rgba(232,145,90,0.12)"/>
+    <!-- Polished: header fill + clean lines -->
+    <rect x="120" y="428" width="160" height="26" rx="6"
+          fill="rgba(232,145,90,0.18)" stroke="none"/>
+    <rect x="120" y="440" width="160" height="14" rx="0"
+          fill="rgba(232,145,90,0.18)" stroke="none"/>
+    <text x="200" y="446" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="9" fill="#E8915A" letter-spacing="1">FINAL DRAFT</text>
+    <line x1="140" y1="468" x2="256" y2="468" stroke="#E8E4DF" stroke-width="1"/>
+    <line x1="140" y1="480" x2="252" y2="480" stroke="#E8E4DF" stroke-width="1"/>
+    <line x1="140" y1="492" x2="256" y2="492" stroke="#E8E4DF" stroke-width="1"/>
+    <line x1="140" y1="504" x2="240" y2="504" stroke="#E8E4DF" stroke-width="1"/>
+    <!-- v3 label -->
+    <text x="200" y="574" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="13" fill="#E8915A">v3</text>
   </g>
 </svg>
