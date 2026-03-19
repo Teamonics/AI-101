@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev: Section 01 — AI Is Not a Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Plus+Jakarta+Sans:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1/dist/lenis.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-primary: #0A0A0F; --bg-section: #0D0D14; --bg-elevated: #14141F;
+      --text-primary: #E8E4DF; --text-secondary: #A09B94; --text-muted: #6B6660;
+      --accent-cool: #4AAFB5; --accent-warm: #E8915A;
+      --font-display: 'Fraunces', serif; --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); }
+    .section { min-height: 100vh; display: grid; grid-template-columns: 45% 55%; gap: 4rem;
+      align-items: center; padding: 4rem 5rem; background: var(--bg-section); }
+    .section-text { display: flex; flex-direction: column; gap: 1.25rem; }
+    .section-number { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.2em; text-transform: uppercase; }
+    .section-headline { font-family: var(--font-display); font-size: 3rem; font-weight: 600; line-height: 1.15; }
+    .section-body { font-size: 1.2rem; font-weight: 300; color: var(--text-secondary); line-height: 1.7; max-width: 38ch; }
+    .viz-container { display: flex; align-items: center; justify-content: center; min-height: 400px; }
+    .viz-container svg { max-width: 100%; height: auto; max-height: 70vh; }
+    .spacer { height: 200vh; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MorphSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+</head>
+<body>
+  <section id="section-01" class="section">
+    <div class="section-text">
+      <p class="section-number">01 / 10</p>
+      <h2 class="section-headline">AI Is Not a Chatbot</h2>
+      <p class="section-body">Claude isn't a search bar you type questions into. It's a reasoning engine that writes, analyzes, codes, and thinks through complex problems alongside you.</p>
+    </div>
+    <div class="viz-container">
+      <!-- SVG inlined for dev testing -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" width="100%" height="100%" style="max-height:70vh;">
+        <title>AI reasoning engine with capabilities</title>
+        <rect id="chat-bubble" x="300" y="220" width="200" height="140" rx="16" ry="16" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
+        <path id="chat-bubble-tail" d="M340 360 L320 390 L370 360Z" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
+        <g id="brain-shape" opacity="0">
+          <path d="M400 180 C420 178 440 188 448 205 C460 200 475 208 478 222 C492 224 500 238 496 252 C508 260 510 278 500 288 C504 302 496 316 484 318 C480 332 466 338 454 334 C446 344 432 348 420 342 C412 350 396 350 388 342 C376 348 362 344 354 334 C342 338 328 332 324 318 C312 316 304 302 308 288 C298 278 300 260 312 252 C308 238 316 224 330 222 C333 208 348 200 360 205 C368 188 388 178 400 180Z" stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
+          <path d="M380 220 C375 230 378 240 385 245 C390 250 388 260 382 265" stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.6"/>
+          <path d="M420 220 C425 230 422 240 415 245 C410 250 412 260 418 265" stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.6"/>
+        </g>
+        <line id="line-write" class="connection-line" x1="400" y1="290" x2="540" y2="180" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <line id="line-analyze" class="connection-line" x1="400" y1="290" x2="570" y2="295" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <line id="line-code" class="connection-line" x1="400" y1="290" x2="530" y2="400" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <line id="line-reason" class="connection-line" x1="400" y1="290" x2="270" y2="400" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <line id="line-search" class="connection-line" x1="400" y1="290" x2="235" y2="295" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <line id="line-create" class="connection-line" x1="400" y1="290" x2="270" y2="180" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+        <g id="icon-write" class="capability-icon" transform="translate(525, 155)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <path d="M8 22l2-6 12-12 4 4-12 12-6 2z" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+        </g>
+        <g id="icon-analyze" class="capability-icon" transform="translate(555, 280)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <rect x="7" y="18" width="4" height="6" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+          <rect x="13" y="12" width="4" height="12" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+          <rect x="19" y="8" width="4" height="16" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+        </g>
+        <g id="icon-code" class="capability-icon" transform="translate(515, 385)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <path d="M12 9l-5 6 5 6M18 9l5 6-5 6" stroke="#4AAFB5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </g>
+        <g id="icon-reason" class="capability-icon" transform="translate(255, 385)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <path d="M15 7a6 6 0 014 10.5V20h-8v-2.5A6 6 0 0115 7z" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+        </g>
+        <g id="icon-search" class="capability-icon" transform="translate(220, 280)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <circle cx="13" cy="13" r="6" stroke="#4AAFB5" stroke-width="1.2"/>
+          <line x1="17.5" y1="17.5" x2="23" y2="23" stroke="#4AAFB5" stroke-width="1.2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-create" class="capability-icon" transform="translate(255, 155)" opacity="0">
+          <rect x="0" y="0" width="30" height="30" rx="6" stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.08)"/>
+          <path d="M7 7h6v4a2 2 0 004 0V7h6v6h-4a2 2 0 000 4h4v6H17v-4a2 2 0 00-4 0v4H7v-6h4a2 2 0 000-4H7V7z" stroke="#4AAFB5" stroke-width="1.2" fill="none"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+  <div class="spacer">↑ Scroll up to replay animation</div>
+
+  <script src="../js/animations/section-01.js"></script>
+  <script>
+    if (typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+    if (typeof DrawSVGPlugin !== 'undefined') gsap.registerPlugin(DrawSVGPlugin);
+    if (typeof SplitText !== 'undefined') gsap.registerPlugin(SplitText);
+
+    const lenis = new Lenis({ autoRaf: false, lerp: 0.1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    initSection01();
+    ScrollTrigger.refresh();
+  </script>
+</body>
+</html>

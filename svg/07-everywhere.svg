@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Claude at the center connecting to Slack, Excel, Chrome, Terminal, and Phone portals</title>
+
+  <!-- Connection lines (behind portals) -->
+  <line id="line-1" class="connect-line" x1="400" y1="300" x2="548" y2="175" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-2" class="connect-line" x1="400" y1="300" x2="580" y2="300" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-3" class="connect-line" x1="400" y1="300" x2="548" y2="425" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-4" class="connect-line" x1="400" y1="300" x2="252" y2="425" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+  <line id="line-5" class="connect-line" x1="400" y1="300" x2="220" y2="300" stroke="#4AAFB5" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+
+  <!-- Central workspace -->
+  <g id="workspace-center">
+    <rect x="340" y="258" width="120" height="84" rx="12"
+          stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.06)"/>
+    <!-- Claude "C" / sparkle -->
+    <text x="400" y="295" text-anchor="middle" font-family="Fraunces, serif"
+          font-size="22" fill="#E8E4DF" font-weight="600">C</text>
+    <text x="400" y="330" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="9" fill="#6B6660" letter-spacing="2">CLAUDE</text>
+  </g>
+
+  <!-- Portal 1: Slack (top right) -->
+  <g id="portal-1" class="portal" transform="translate(510, 138)" opacity="0">
+    <rect x="0" y="0" width="76" height="74" rx="12"
+          stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.08)"/>
+    <!-- Slack hash # -->
+    <text x="38" y="47" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="28" fill="#4AAFB5" font-weight="600">#</text>
+    <text x="38" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="8" fill="#6B6660">Slack</text>
+  </g>
+
+  <!-- Portal 2: Excel (right) -->
+  <g id="portal-2" class="portal" transform="translate(554, 263)" opacity="0">
+    <rect x="0" y="0" width="76" height="74" rx="12"
+          stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.08)"/>
+    <!-- Grid icon -->
+    <rect x="16" y="14" width="44" height="36" rx="3" stroke="#4AAFB5" stroke-width="1"/>
+    <line x1="16" y1="25" x2="60" y2="25" stroke="#4AAFB5" stroke-width="0.8"/>
+    <line x1="16" y1="36" x2="60" y2="36" stroke="#4AAFB5" stroke-width="0.8"/>
+    <line x1="31" y1="14" x2="31" y2="50" stroke="#4AAFB5" stroke-width="0.8"/>
+    <line x1="45" y1="14" x2="45" y2="50" stroke="#4AAFB5" stroke-width="0.8"/>
+    <text x="38" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="8" fill="#6B6660">Excel</text>
+  </g>
+
+  <!-- Portal 3: Chrome (bottom right) -->
+  <g id="portal-3" class="portal" transform="translate(510, 388)" opacity="0">
+    <rect x="0" y="0" width="76" height="74" rx="12"
+          stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.08)"/>
+    <!-- Chrome circle icon -->
+    <circle cx="38" cy="33" r="18" stroke="#4AAFB5" stroke-width="1.2"/>
+    <circle cx="38" cy="33" r="7" stroke="#4AAFB5" stroke-width="1.2"/>
+    <line x1="38" y1="15" x2="38" y2="26" stroke="#4AAFB5" stroke-width="1"/>
+    <line x1="23" y1="42" x2="31" y2="37" stroke="#4AAFB5" stroke-width="1"/>
+    <line x1="53" y1="42" x2="45" y2="37" stroke="#4AAFB5" stroke-width="1"/>
+    <text x="38" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="8" fill="#6B6660">Chrome</text>
+  </g>
+
+  <!-- Portal 4: Terminal (bottom left) -->
+  <g id="portal-4" class="portal" transform="translate(214, 388)" opacity="0">
+    <rect x="0" y="0" width="76" height="74" rx="12"
+          stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.08)"/>
+    <!-- Terminal >_ -->
+    <text x="38" y="40" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="18" fill="#4AAFB5">&gt;_</text>
+    <text x="38" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="8" fill="#6B6660">Terminal</text>
+  </g>
+
+  <!-- Portal 5: Phone (top left, but shown as left) -->
+  <g id="portal-5" class="portal" transform="translate(170, 263)" opacity="0">
+    <rect x="0" y="0" width="76" height="74" rx="12"
+          stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.08)"/>
+    <!-- Phone outline -->
+    <rect x="22" y="10" width="32" height="52" rx="5" stroke="#4AAFB5" stroke-width="1.2"/>
+    <line x1="34" y1="55" x2="42" y2="55" stroke="#4AAFB5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="34" y1="16" x2="42" y2="16" stroke="#4AAFB5" stroke-width="1" opacity="0.4"/>
+    <text x="38" y="84" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="8" fill="#6B6660">Mobile</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev: Section 02 — Helpful, Harmless, Honest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Plus+Jakarta+Sans:wght@300;400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1/dist/lenis.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-primary: #0A0A0F; --bg-section: #0D0D14;
+      --text-primary: #E8E4DF; --text-secondary: #A09B94; --text-muted: #6B6660;
+      --accent-cool: #4AAFB5; --accent-warm: #E8915A; --accent-highlight: #C4A052;
+      --font-display: 'Fraunces', serif; --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); }
+    .section { min-height: 100vh; display: grid; grid-template-columns: 45% 55%; gap: 4rem;
+      align-items: center; padding: 4rem 5rem; background: var(--bg-section); }
+    .section-text { display: flex; flex-direction: column; gap: 1.25rem; }
+    .section-number { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.2em; text-transform: uppercase; }
+    .section-headline { font-family: var(--font-display); font-size: 3rem; font-weight: 600; line-height: 1.15; }
+    .section-body { font-size: 1.2rem; font-weight: 300; color: var(--text-secondary); line-height: 1.7; max-width: 38ch; }
+    .section-cta { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 500;
+      color: var(--accent-highlight); text-decoration: none; border: 1px solid var(--accent-highlight);
+      padding: 0.75rem 1.5rem; border-radius: 8px; width: fit-content; }
+    .viz-container { display: flex; align-items: center; justify-content: center; min-height: 400px; }
+    .viz-container svg { max-width: 100%; height: auto; max-height: 70vh; }
+    .spacer { height: 200vh; display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MorphSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+</head>
+<body>
+  <section id="section-02" class="section">
+    <div class="section-text">
+      <p class="section-number">02 / 10</p>
+      <h2 class="section-headline">Helpful, Harmless, Honest</h2>
+      <p class="section-body">Scroll to see the animation for this section.</p>
+    </div>
+    <div class="viz-container" id="viz-02">
+      <p style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;">Loading…</p>
+    </div>
+  </section>
+  <div class="spacer">↑ Scroll up to replay</div>
+
+  <script src="../js/animations/section-02.js"></script>
+  <script>
+    if (typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+    if (typeof DrawSVGPlugin !== 'undefined') gsap.registerPlugin(DrawSVGPlugin);
+    if (typeof SplitText !== 'undefined') gsap.registerPlugin(SplitText);
+    if (typeof MorphSVGPlugin !== 'undefined') gsap.registerPlugin(MorphSVGPlugin);
+    if (typeof MotionPathPlugin !== 'undefined') gsap.registerPlugin(MotionPathPlugin);
+
+    const lenis = new Lenis({ autoRaf: false, lerp: 0.1, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    fetch('../svg/02-constitutional.svg')
+      .then(r => r.text())
+      .then(text => {
+        const container = document.getElementById('viz-02');
+        container.innerHTML = text;
+        const svg = container.querySelector('svg');
+        if (svg) {
+          svg.setAttribute('width', '100%');
+          svg.setAttribute('height', '100%');
+          svg.style.maxHeight = '70vh';
+        }
+        initSection02();
+        ScrollTrigger.refresh();
+      })
+      .catch(() => {
+        document.getElementById('viz-02').innerHTML =
+          '<p style="color:var(--text-muted);padding:2rem;font-family:var(--font-mono);font-size:0.8rem;">SVG not found — serve from HTTP server</p>';
+        initSection02();
+        ScrollTrigger.refresh();
+      });
+  </script>
+</body>
+</html>
