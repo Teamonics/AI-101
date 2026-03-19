@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Constitutional AI: three pillars of Helpful, Harmless, and Honest built on a foundation</title>
+
+  <!-- Foundation -->
+  <rect id="foundation" x="100" y="480" width="600" height="40" rx="6"
+        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)"/>
+  <text x="400" y="506" text-anchor="middle" font-family="JetBrains Mono, monospace"
+        font-size="11" fill="#6B6660" letter-spacing="3">CONSTITUTIONAL AI</text>
+
+  <!-- Light rays (behind pillars, radiating upward) -->
+  <line class="light-ray" x1="200" y1="480" x2="140" y2="260" stroke="#4AAFB5" stroke-width="1" opacity="0"/>
+  <line class="light-ray" x1="240" y1="480" x2="200" y2="200" stroke="#4AAFB5" stroke-width="1" opacity="0"/>
+  <line class="light-ray" x1="400" y1="480" x2="400" y2="180" stroke="#4AAFB5" stroke-width="1" opacity="0"/>
+  <line class="light-ray" x1="560" y1="480" x2="600" y2="200" stroke="#4AAFB5" stroke-width="1" opacity="0"/>
+  <line class="light-ray" x1="600" y1="480" x2="660" y2="260" stroke="#4AAFB5" stroke-width="1" opacity="0"/>
+
+  <!-- Pillar 1: Helpful -->
+  <rect id="pillar-1" x="160" y="230" width="80" height="250" rx="4"
+        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)" opacity="0"/>
+
+  <!-- Pillar 2: Harmless -->
+  <rect id="pillar-2" x="360" y="230" width="80" height="250" rx="4"
+        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)" opacity="0"/>
+
+  <!-- Pillar 3: Honest -->
+  <rect id="pillar-3" x="560" y="230" width="80" height="250" rx="4"
+        stroke="#E8E4DF" stroke-width="1.5" fill="rgba(232,228,223,0.04)" opacity="0"/>
+
+  <!-- Icon: Shield (Helpful) -->
+  <g id="icon-shield" transform="translate(185, 248)" opacity="0">
+    <path d="M15 4 L26 8 L26 18 C26 24 20 28 15 30 C10 28 4 24 4 18 L4 8 Z"
+          stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
+    <path d="M10 16 L14 20 L21 12" stroke="#4AAFB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Icon: Heart (Harmless) -->
+  <g id="icon-heart" transform="translate(385, 248)" opacity="0">
+    <path d="M15 28 C15 28 4 20 4 12 C4 8 7 5 11 5 C13 5 14.5 6 15 7 C15.5 6 17 5 19 5 C23 5 26 8 26 12 C26 20 15 28 15 28Z"
+          stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Icon: Eye (Honest) -->
+  <g id="icon-eye" transform="translate(585, 248)" opacity="0">
+    <path d="M4 17 C4 17 8 8 15 8 C22 8 26 17 26 17 C26 17 22 26 15 26 C8 26 4 17 4 17Z"
+          stroke="#4AAFB5" stroke-width="1.5" fill="none"/>
+    <circle cx="15" cy="17" r="4" stroke="#4AAFB5" stroke-width="1.5"/>
+    <circle cx="15" cy="17" r="1.5" fill="#4AAFB5"/>
+  </g>
+
+  <!-- Labels -->
+  <text id="label-helpful" class="pillar-label" x="200" y="500" text-anchor="middle"
+        font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#A09B94" opacity="0">Helpful</text>
+  <text id="label-harmless" class="pillar-label" x="400" y="500" text-anchor="middle"
+        font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#A09B94" opacity="0">Harmless</text>
+  <text id="label-honest" class="pillar-label" x="600" y="500" text-anchor="middle"
+        font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#A09B94" opacity="0">Honest</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Comparison of a vague prompt versus a structured prompt with context, task, and rules</title>
+
+  <!-- Bad prompt box -->
+  <rect id="prompt-bad" x="60" y="240" width="220" height="60" rx="12"
+        stroke="#E85A5A" stroke-width="1.5" fill="rgba(232,90,90,0.06)"/>
+  <text x="80" y="267" font-family="JetBrains Mono, monospace" font-size="11" fill="#A09B94">Write something about</text>
+  <text x="80" y="283" font-family="JetBrains Mono, monospace" font-size="11" fill="#A09B94">marketing</text>
+
+  <!-- X mark near bad prompt -->
+  <g id="x-mark" transform="translate(255, 218)" opacity="0">
+    <circle cx="12" cy="12" r="10" stroke="#E85A5A" stroke-width="1.5"/>
+    <line x1="8" y1="8" x2="16" y2="16" stroke="#E85A5A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="8" x2="8" y2="16" stroke="#E85A5A" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Transform arrow -->
+  <path id="arrow-transform" class="transform-arrow"
+        d="M290 270 C360 240 390 260 440 270"
+        stroke="#6B6660" stroke-width="1.5" stroke-dasharray="none" fill="none"/>
+  <polygon points="440,270 430,264 432,276" fill="#6B6660"/>
+
+  <!-- Good prompt box (initially hidden) -->
+  <g id="prompt-good" opacity="0">
+    <rect x="455" y="150" width="290" height="250" rx="12"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.06)"/>
+
+    <!-- Context line -->
+    <text x="475" y="186" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">I'm the marketing lead at a</text>
+    <text x="475" y="200" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">B2B SaaS startup targeting</text>
+    <text x="475" y="214" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">enterprise customers…</text>
+
+    <!-- Divider -->
+    <line x1="475" y1="226" x2="725" y2="226" stroke="#4A4742" stroke-width="0.5"/>
+
+    <!-- Task line -->
+    <text x="475" y="244" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">Research the streaming</text>
+    <text x="475" y="258" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">software market and our</text>
+    <text x="475" y="272" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">top 3 competitors…</text>
+
+    <!-- Divider -->
+    <line x1="475" y1="284" x2="725" y2="284" stroke="#4A4742" stroke-width="0.5"/>
+
+    <!-- Rules line -->
+    <text x="475" y="302" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">Structure as a professional</text>
+    <text x="475" y="316" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">report. Use bullet points</text>
+    <text x="475" y="330" font-family="JetBrains Mono, monospace" font-size="10" fill="#E8E4DF">for findings…</text>
+
+    <!-- Check mark -->
+    <g id="check-mark" opacity="0">
+      <circle cx="730" cy="168" r="10" stroke="#5AE89A" stroke-width="1.5"/>
+      <path d="M724 168 L728 172 L736 163" stroke="#5AE89A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Annotations (appear after good prompt) -->
+  <!-- Context bracket -->
+  <g id="bracket-context" class="annotation" opacity="0">
+    <path d="M450 175 L440 175 L440 218 L450 218" stroke="#E8915A" stroke-width="1.5" fill="none"/>
+    <text x="420" y="196" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="11" fill="#E8915A" font-weight="500">Context</text>
+  </g>
+
+  <!-- Task bracket -->
+  <g id="bracket-task" class="annotation" opacity="0">
+    <path d="M450 233 L440 233 L440 278 L450 278" stroke="#E8915A" stroke-width="1.5" fill="none"/>
+    <text x="420" y="256" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="11" fill="#E8915A" font-weight="500">Task</text>
+  </g>
+
+  <!-- Rules bracket -->
+  <g id="bracket-rules" class="annotation" opacity="0">
+    <path d="M450 289 L440 289 L440 334 L450 334" stroke="#E8915A" stroke-width="1.5" fill="none"/>
+    <text x="420" y="312" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="11" fill="#E8915A" font-weight="500">Rules</text>
+  </g>
+</svg>
