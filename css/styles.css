@@ -276,7 +276,21 @@ body {
 @media (max-width: 767px) {
   .section {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    /* Keep min-height but allow taller content */
+    min-height: 100svh;
+    /* Tighter padding on mobile */
+    padding: 2rem 1.25rem;
+  }
+
+  .section-headline {
+    /* Slightly smaller on very narrow viewports */
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+
+  .section-body {
+    max-width: 100%;
+    font-size: var(--text-base);
   }
 }
 
@@ -316,6 +330,11 @@ body {
   opacity: 0;
 }
 
+.section-body strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 .section-cta {
   display: inline-flex;
   align-items: center;
@@ -352,12 +371,27 @@ body {
 .viz-container svg {
   max-width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 @media (max-width: 767px) {
   .viz-container {
-    max-height: 50vh;
-    min-height: unset;
+    /* Allow viz to breathe on mobile — taller for portrait clarity */
+    max-height: 55vw;
+    min-height: 260px;
+    width: 100%;
+  }
+
+  .viz-container svg {
+    width: 100%;
+    height: auto;
+    /* Scale up slightly so SVG detail is readable */
+    max-height: 55vw;
+  }
+
+  /* On mobile, sections stack text on top, viz below */
+  .section {
+    padding-bottom: 3rem;
   }
 }
 

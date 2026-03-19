@@ -1,98 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
-  <title>Brain circuit diagram showing Skills and Connectors plugging into the AI brain</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" fill="none">
+  <title>A brain being extended by Skills and Connectors that plug in from all sides</title>
 
-  <!-- Brain glow (behind everything) -->
-  <circle id="brain-glow" cx="400" cy="290" r="130" fill="#4AAFB5" opacity="0"/>
+  <!-- Brain glow -->
+  <circle id="brain-glow" cx="300" cy="240" r="120" fill="#4AAFB5" opacity="0"/>
 
-  <!-- Brain circuit paths -->
-  <!-- Main brain outline segments (circuit style: straight lines + right angles) -->
-  <path id="cp-1" class="circuit-path"
-        d="M340 200 L300 200 L300 240 L280 240 L280 300 L300 300 L300 340 L340 340"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-  <path id="cp-2" class="circuit-path"
-        d="M340 200 L360 180 L400 170 L440 180 L460 200"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-  <path id="cp-3" class="circuit-path"
-        d="M460 200 L500 200 L500 240 L520 240 L520 300 L500 300 L500 340 L460 340"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-  <path id="cp-4" class="circuit-path"
-        d="M340 340 L360 360 L400 370 L440 360 L460 340"
-        stroke="#E8E4DF" stroke-width="1.5" fill="none"/>
-  <!-- Internal circuit lines -->
-  <path id="cp-5" class="circuit-path"
-        d="M340 240 L360 240 L380 220 L420 220 L440 240 L460 240"
-        stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.7"/>
-  <path id="cp-6" class="circuit-path"
-        d="M340 300 L360 300 L380 320 L420 320 L440 300 L460 300"
-        stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.7"/>
-  <path id="cp-7" class="circuit-path"
-        d="M380 220 L380 320"
-        stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.5"/>
-  <path id="cp-8" class="circuit-path"
-        d="M420 220 L420 320"
+  <!-- Clean brain outline -->
+  <path id="brain-outline" class="circuit-path"
+        d="M300 130
+           C326 128 348 140 358 160
+           C374 154 392 164 396 180
+           C414 182 426 198 422 214
+           C438 224 440 246 428 258
+           C434 274 424 292 410 294
+           C406 312 390 320 374 316
+           C364 328 346 334 332 326
+           C320 334 280 334 268 326
+           C254 334 236 328 226 316
+           C210 320 194 312 190 294
+           C176 292 166 274 172 258
+           C160 246 162 224 178 214
+           C174 198 186 182 204 180
+           C208 164 226 154 242 160
+           C252 140 274 128 300 130Z"
+        stroke="#E8E4DF" stroke-width="2" fill="rgba(232,228,223,0.04)"/>
+
+  <!-- Brain center dividing line -->
+  <path id="brain-divide" class="circuit-path"
+        d="M300 148 C292 180 296 200 300 220 C304 240 298 260 300 300"
         stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.5"/>
 
-  <!-- Junction circles -->
-  <circle cx="300" cy="240" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="300" cy="300" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="520" cy="240" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="520" cy="300" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="380" cy="220" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="420" cy="220" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="380" cy="320" r="4" fill="#E8E4DF" opacity="0.5"/>
-  <circle cx="420" cy="320" r="4" fill="#E8E4DF" opacity="0.5"/>
+  <!-- Left hemisphere curves -->
+  <path id="brain-left" class="circuit-path"
+        d="M230 180 C218 196 216 216 224 232 C216 248 222 268 234 276"
+        stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Right hemisphere curves -->
+  <path id="brain-right" class="circuit-path"
+        d="M370 180 C382 196 384 216 376 232 C384 248 378 268 366 276"
+        stroke="#E8E4DF" stroke-width="1" fill="none" opacity="0.5"/>
 
   <!-- Sockets on brain edge -->
-  <rect class="socket" x="270" y="258" width="10" height="16" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
-  <rect class="socket" x="270" y="293" width="10" height="16" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
-  <rect class="socket" x="520" y="258" width="10" height="16" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
-  <rect class="socket" x="520" y="293" width="10" height="16" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
-  <rect class="socket" x="392" y="160" width="16" height="10" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
-  <rect class="socket" x="392" y="368" width="16" height="10" rx="2"
-        stroke="#4AAFB5" stroke-width="1.2" fill="rgba(74,175,181,0.1)"/>
+  <rect class="socket" x="183" y="205" width="14" height="20" rx="3"
+        stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.12)"/>
+  <rect class="socket" x="183" y="248" width="14" height="20" rx="3"
+        stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.12)"/>
+  <rect class="socket" x="403" y="205" width="14" height="20" rx="3"
+        stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.12)"/>
+  <rect class="socket" x="403" y="248" width="14" height="20" rx="3"
+        stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.12)"/>
 
-  <!-- Plugs (offset from sockets, will animate to connect) -->
-  <!-- Left plugs -->
+  <!-- Connector: Drive (left top) -->
   <g id="plug-1" class="plug" opacity="0">
-    <rect x="210" y="258" width="18" height="12" rx="2"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.12)"/>
-    <line x1="228" y1="264" x2="245" y2="264" stroke="#E8915A" stroke-width="1"/>
-    <text x="200" y="254" text-anchor="end" font-family="JetBrains Mono, monospace"
-          font-size="9" fill="#A09B94">Drive</text>
+    <rect x="60" y="202" width="50" height="26" rx="5"
+          stroke="#E8915A" stroke-width="1.5" fill="rgba(232,145,90,0.1)"/>
+    <line x1="110" y1="215" x2="183" y2="215" stroke="#E8915A" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="85" y="216" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="10" fill="#E8915A">Drive</text>
+    <text x="85" y="244" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="10" fill="#6B6660">Connector</text>
   </g>
+
+  <!-- Connector: Slack (left bottom) -->
   <g id="plug-2" class="plug" opacity="0">
-    <rect x="210" y="293" width="18" height="12" rx="2"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.12)"/>
-    <line x1="228" y1="299" x2="245" y2="299" stroke="#E8915A" stroke-width="1"/>
-    <text x="200" y="289" text-anchor="end" font-family="JetBrains Mono, monospace"
-          font-size="9" fill="#A09B94">Slack</text>
+    <rect x="60" y="248" width="50" height="26" rx="5"
+          stroke="#E8915A" stroke-width="1.5" fill="rgba(232,145,90,0.1)"/>
+    <line x1="110" y1="261" x2="183" y2="261" stroke="#E8915A" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="85" y="262" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="10" fill="#E8915A">Slack</text>
+    <text x="85" y="290" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="10" fill="#6B6660">Connector</text>
   </g>
-  <!-- Right plugs -->
+
+  <!-- Skill: Brand (right top) -->
   <g id="plug-3" class="plug" opacity="0">
-    <rect x="572" y="258" width="18" height="12" rx="2"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.12)"/>
-    <line x1="572" y1="264" x2="555" y2="264" stroke="#E8915A" stroke-width="1"/>
-    <text x="600" y="254" font-family="JetBrains Mono, monospace"
-          font-size="9" fill="#A09B94">Asana</text>
+    <rect x="490" y="202" width="50" height="26" rx="5"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <line x1="417" y1="215" x2="490" y2="215" stroke="#4AAFB5" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="515" y="216" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="10" fill="#4AAFB5">Brand</text>
+    <text x="515" y="244" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="10" fill="#6B6660">Skill</text>
   </g>
+
+  <!-- Skill: Report (right bottom) -->
   <g id="plug-4" class="plug" opacity="0">
-    <rect x="572" y="293" width="18" height="12" rx="2"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.12)"/>
-    <line x1="572" y1="299" x2="555" y2="299" stroke="#E8915A" stroke-width="1"/>
-    <text x="600" y="289" font-family="JetBrains Mono, monospace"
-          font-size="9" fill="#A09B94">CRM</text>
+    <rect x="490" y="248" width="50" height="26" rx="5"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <line x1="417" y1="261" x2="490" y2="261" stroke="#4AAFB5" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="515" y="262" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="10" fill="#4AAFB5">Report</text>
+    <text x="515" y="290" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="10" fill="#6B6660">Skill</text>
   </g>
-  <!-- Top plug -->
+
+  <!-- Skill: Top (top center) -->
   <g id="plug-5" class="plug" opacity="0">
-    <rect x="392" y="108" width="16" height="18" rx="2"
-          stroke="#E8915A" stroke-width="1.2" fill="rgba(232,145,90,0.12)"/>
-    <line x1="400" y1="126" x2="400" y2="143" stroke="#E8915A" stroke-width="1"/>
-    <text x="418" y="120" font-family="JetBrains Mono, monospace"
-          font-size="9" fill="#A09B94">Skills</text>
+    <rect x="275" y="60" width="50" height="26" rx="5"
+          stroke="#4AAFB5" stroke-width="1.5" fill="rgba(74,175,181,0.1)"/>
+    <line x1="300" y1="86" x2="300" y2="130" stroke="#4AAFB5" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="300" y="76" text-anchor="middle" font-family="JetBrains Mono, monospace"
+          font-size="10" fill="#4AAFB5">Tone</text>
+    <text x="300" y="48" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+          font-size="10" fill="#6B6660">Skill</text>
   </g>
+
+  <!-- Labels at bottom -->
+  <text x="150" y="420" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+        font-size="13" fill="#E8915A" font-weight="600" opacity="0" id="lbl-connectors">Connectors</text>
+  <text x="150" y="438" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+        font-size="11" fill="#6B6660" opacity="0" id="lbl-conn-sub">link your tools</text>
+  <text x="450" y="420" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+        font-size="13" fill="#4AAFB5" font-weight="600" opacity="0" id="lbl-skills">Skills</text>
+  <text x="450" y="438" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif"
+        font-size="11" fill="#6B6660" opacity="0" id="lbl-skills-sub">encode your workflows</text>
 </svg>

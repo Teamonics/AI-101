@@ -24,75 +24,69 @@ function initSection03() {
     // Phase 1: Headline
     if (headline) {
       gsap.set(headline, { opacity: 0, y: 20 });
-      tl.to(headline, { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }, 0);
+      tl.to(headline, { opacity: 1, y: 0, duration: 0.2, ease: 'power2.out' }, 0);
     }
 
-    // Phase 2: Bad prompt + X mark
-    const badPrompt = section.querySelector('#prompt-bad');
+    // Phase 2: Prompt card outline draws in
+    const card = section.querySelector('#prompt-card');
+    if (card) {
+      const len = card.getTotalLength ? card.getTotalLength() : 1800;
+      gsap.set(card, { strokeDasharray: len, strokeDashoffset: len });
+      tl.to(card, { strokeDashoffset: 0, duration: 0.3, ease: 'power2.inOut' }, 0.05);
+    }
+
+    // Phase 3: X mark (bad prompt) fades in
     const xMark = section.querySelector('#x-mark');
-    if (badPrompt) {
-      gsap.set(badPrompt, { opacity: 0 });
-      tl.to(badPrompt, { opacity: 1, duration: 0.2 }, 0.1);
-    }
     if (xMark) {
-      gsap.set(xMark, { opacity: 0, scale: 0, transformOrigin: 'center' });
-      tl.to(xMark, { opacity: 1, scale: 1, duration: 0.15, ease: 'back.out(1.5)' }, 0.22);
+      gsap.set(xMark, { opacity: 0 });
+      tl.to(xMark, { opacity: 1, duration: 0.15 }, 0.2);
     }
 
-    // Phase 3: Transform arrow draws itself
-    const arrow = section.querySelector('#arrow-transform');
-    if (arrow) {
-      const len = arrow.getTotalLength ? arrow.getTotalLength() : 150;
-      gsap.set(arrow, { strokeDasharray: len, strokeDashoffset: len });
-      tl.to(arrow, { strokeDashoffset: 0, duration: 0.25, ease: 'power2.inOut' }, 0.2);
-      // Arrow polygon opacity
-      const poly = arrow.nextElementSibling;
-      if (poly && poly.tagName === 'polygon') {
-        gsap.set(poly, { opacity: 0 });
-        tl.to(poly, { opacity: 1, duration: 0.1 }, 0.43);
-      }
-    }
-
-    // Phase 4: Good prompt fades in
-    const goodPrompt = section.querySelector('#prompt-good');
-    if (goodPrompt) {
-      gsap.set(goodPrompt, { opacity: 0, scale: 0.92, transformOrigin: 'top left' });
-      tl.to(goodPrompt, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out', force3D: true }, 0.3);
-    }
-
-    // Phase 5: Annotations appear
-    const annotations = section.querySelectorAll('.annotation');
-    annotations.forEach((ann) => {
-      gsap.set(ann, { opacity: 0, x: -10 });
-      const paths = ann.querySelectorAll('path');
-      if (paths.length && typeof DrawSVGPlugin === 'undefined') {
-        paths.forEach((p) => {
-          const len = p.getTotalLength ? p.getTotalLength() : 60;
-          gsap.set(p, { strokeDasharray: len, strokeDashoffset: len });
-        });
-      }
+    // Phase 4: Context block reveals
+    const blockContext = section.querySelector('#block-context');
+    const lblContext = section.querySelector('#lbl-context');
+    const textC1 = section.querySelector('#text-context-1');
+    const textC2 = section.querySelector('#text-context-2');
+    [blockContext, lblContext, textC1, textC2].filter(Boolean).forEach((el) => {
+      gsap.set(el, { opacity: 0 });
     });
+    tl.to(blockContext, { opacity: 1, duration: 0.15 }, 0.3);
+    tl.to([lblContext, textC1, textC2], { opacity: 1, stagger: 0.05, duration: 0.15 }, 0.35);
 
-    tl.to(annotations, {
-      opacity: 1, x: 0, stagger: 0.09, duration: 0.2, ease: 'power2.out',
-    }, 0.45);
+    // Phase 5: Task block reveals
+    const blockTask = section.querySelector('#block-task');
+    const lblTask = section.querySelector('#lbl-task');
+    const textT1 = section.querySelector('#text-task-1');
+    const textT2 = section.querySelector('#text-task-2');
+    [blockTask, lblTask, textT1, textT2].filter(Boolean).forEach((el) => {
+      gsap.set(el, { opacity: 0 });
+    });
+    tl.to(blockTask, { opacity: 1, duration: 0.15 }, 0.48);
+    tl.to([lblTask, textT1, textT2], { opacity: 1, stagger: 0.05, duration: 0.15 }, 0.53);
 
-    // Phase 6: Check mark
+    // Phase 6: Rules block reveals
+    const blockRules = section.querySelector('#block-rules');
+    const lblRules = section.querySelector('#lbl-rules');
+    const textR1 = section.querySelector('#text-rules-1');
+    const textR2 = section.querySelector('#text-rules-2');
+    [blockRules, lblRules, textR1, textR2].filter(Boolean).forEach((el) => {
+      gsap.set(el, { opacity: 0 });
+    });
+    tl.to(blockRules, { opacity: 1, duration: 0.15 }, 0.64);
+    tl.to([lblRules, textR1, textR2], { opacity: 1, stagger: 0.05, duration: 0.15 }, 0.69);
+
+    // Phase 7: X dims, check appears
+    if (xMark) tl.to(xMark, { opacity: 0.3, duration: 0.15 }, 0.78);
     const checkMark = section.querySelector('#check-mark');
     if (checkMark) {
       gsap.set(checkMark, { opacity: 0, scale: 0, transformOrigin: 'center' });
-      tl.to(checkMark, { opacity: 1, scale: 1, duration: 0.15, ease: 'back.out(1.5)' }, 0.65);
-    }
-
-    // Phase 7: Bad prompt dims
-    if (badPrompt) {
-      tl.to(badPrompt, { opacity: 0.2, duration: 0.2 }, 0.7);
+      tl.to(checkMark, { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(1.5)' }, 0.8);
     }
 
     // Phase 8: Body text
     if (body) {
       gsap.set(body, { opacity: 0, y: 20 });
-      tl.to(body, { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }, 0.85);
+      tl.to(body, { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }, 0.88);
     }
 
     return tl;
